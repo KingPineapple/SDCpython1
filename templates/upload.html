@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="about-section">
+    <div class="container">
+
+    <h2>Upload Screen Holder</h2>
+    <p>SDC Lab - Uploading file to blob.</p>
+    <p>uploaded File: {{ file}}</p>
+    <p>Target Container: {{ container }}</p>
+    <p>Image Description: {{ descr }}</p>
+    {% for item in object %}
+       <li>Object Found: {{ item }}</li>
+       {% endfor %}
+    {% for item in faces %}
+       <li>Face Found: {{ item }}</li>
+       {% endfor %}
+ 
+    <img src= {{ pic }}>
+    <a href="{{ url_for('index') }}" class="btn-secondary"> Return to Main Page</a>
+    </div>
+  </main>
+{% endblock %}
